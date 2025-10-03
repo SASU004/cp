@@ -4,19 +4,19 @@ using namespace std;
 #define ll long long
 
 void solution() {
-    ll n ;
+    int n ;
     cin>>n;
-    while ( n!=1){
-        if (n%2==0){
-            cout<<n<<" ";
-            n=n/2;
-        }
-        else{
-            cout<<n<<" ";
-            n=3*n+1;
-        }
+    vector<int> a(n);
+    for ( int i = 0; i<n;i++){
+       cin>>a[i];
     }
-    cout<<1<<endl;
+    ll answer =0;
+    for( int i=1;i <n;i++){
+        if (a[i]<a[i-1]){
+            answer += (a[i-1]-a[i]);
+            a[i]=a[i-1];
+        }
+    }cout << answer << endl;
 }
 
 int main() {

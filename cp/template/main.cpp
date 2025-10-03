@@ -5,7 +5,7 @@ using namespace std;
 
 void solution() {
     int n ;
- vector < int > v(n);
+    cin>>n;
 }
 
 int main() {

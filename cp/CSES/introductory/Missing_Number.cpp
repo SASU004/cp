@@ -4,21 +4,22 @@ using namespace std;
 #define ll long long
 
 void solution() {
-    ll n ;
+    int n ;
     cin>>n;
-    while ( n!=1){
-        if (n%2==0){
-            cout<<n<<" ";
-            n=n/2;
-        }
-        else{
-            cout<<n<<" ";
-            n=3*n+1;
-        }
+    vector<bool> a(n+1);
+    for ( int i = 0; i<n-1;i++){
+        int x;
+       cin>>x;
+        a[x]=true;
     }
-    cout<<1<<endl;
-}
+    for ( int x = 1; x<=n ;x++){
+        if(!a[x]){
+            cout<<x<<endl;
+            return ;
 
+}
+}}
+        
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
